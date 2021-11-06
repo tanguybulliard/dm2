@@ -2,7 +2,7 @@ package com.company;
 
 import java.util.Scanner;
 
-public class BenevoleView {
+public class BenevoleView extends View {
 
     static Scanner input = new Scanner(System.in);
 

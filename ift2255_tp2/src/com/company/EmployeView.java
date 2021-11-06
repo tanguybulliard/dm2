@@ -3,7 +3,8 @@ import java.util.Scanner;
 import java.util.Random;
 
 
-public class EmployeView {
+public class EmployeView extends View{
+
     static Scanner input = new Scanner(System.in);
         public static void displayMenu() {
 
@@ -12,12 +13,12 @@ public class EmployeView {
                 System.out.println("Veuillez entrer l'option désirée.");
                 System.out.println("1: afficher les rendez-vous");
                 System.out.println("2: ajouter un rendez-vous");
-                System.out.println("3: afficher le calendrier ");
-                System.out.println("4: créer benevole");
-                System.out.println("5: supprimer benevole");
-                System.out.println("6: modifier benevole");
-                System.out.println("7:gérer calendrier bénévole");
-                System.out.println("8: gérer visiteur");
+                System.out.println("3: créer benevole");
+                System.out.println("4: supprimer benevole");
+                System.out.println("5: modifier benevole");
+                System.out.println("6: gérer calendrier bénévole");
+                System.out.println("7: gérer visiteur");
+                System.out.println("8: crér visiteur");
                 System.out.println("9: pour quitter le programme ");
                 String input = EmployeView.input.nextLine();
 
@@ -31,13 +32,15 @@ public class EmployeView {
                         //controller.addRdv();
                         break;
 
+
                     case "3":
-                        //xxxxxx.displayCalendrier();
-                        break;
-                    case "4":
                         //à voir
                         break;
 
+
+                    case "4":
+                        //à voir
+                        break;
 
                     case "5":
                         //à voir
@@ -48,14 +51,10 @@ public class EmployeView {
                         break;
 
                     case "7":
-                        //à voir
-                        break;
-
-                    case "8":
                         updateVisiteur();
                         break;
 
-                    case "9":
+                    case "8":
                         createMember();
                         break;
 
@@ -77,7 +76,7 @@ public class EmployeView {
     public static void createMember() {
         Random rand = new Random();
 
-        String numeroDeCompte = String.valueOf(rand.nextInt(100000));
+        String numeroDeCompte = String.valueOf(rand.nextInt(100000000));
 
 
         System.out.println("Veuillez entrer le nom du client");

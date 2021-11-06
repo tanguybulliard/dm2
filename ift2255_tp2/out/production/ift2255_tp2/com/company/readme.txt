@@ -76,8 +76,7 @@ En tout tant vous pouvez taper 0 pour revenir au menu principal.
 - [5] modifier benevole
 - [6] gérer calendrier bénévole
 - [7] gérer visiteur
-- [8] créer visiteur
-- [9] quitter le programme
+- [8] quitter le programme
 
     #### afficher les rendez-vous
     Dans cette section vous pouvez afficher les rendez-vous, pour savoir les places disponibles
@@ -101,6 +100,3 @@ En tout tant vous pouvez taper 0 pour revenir au menu principal.
    - [1] supprimer un client
    - [2] modifier un client
    - [3]revenir en arrière
-
-    ####créer visiteur
-    permet de créer un visiteur avec les informations du formulaire, un id est créer en utilisant la fonction random.
