@@ -6,8 +6,9 @@ public class SessionRepository{
 
     }
 
-    public boolean AddSession(){
-        
+    public static boolean AddSession(Session session){
+        sessions.add(session);
+        return true;
     }
 
 }
