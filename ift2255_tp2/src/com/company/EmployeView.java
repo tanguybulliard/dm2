@@ -4,7 +4,6 @@ import java.util.Random;
 
 
 public class EmployeView extends View{
-
     static Scanner input = new Scanner(System.in);
         public static void displayMenu() {
 
@@ -113,7 +112,7 @@ public class EmployeView extends View{
         //on cree le membre et on enregistre son user ID
         Client newMember = new Client(numeroDeCompte, nom, prenom, dateDeNaissance, numAssuranceMaladie, dateVisite,
                 dose, ifCovid, ifSymptome, ifallergie, typeVaccin);
-
+        EmployeController.CreateMember(newMember);
         //si la creation n'est pas reussie, on en informe l'agent
         if (newMember.equals("x")) {
 
@@ -172,4 +171,3 @@ public class EmployeView extends View{
 
     }
 }
-
