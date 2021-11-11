@@ -24,7 +24,7 @@ public class BenevoleView extends View {
                     break;
 
                 case "2":
-                    //xxx.addRdv();
+                    BenevoleController.AddEntry();
                     break;
 
                 case "3":
