@@ -1,6 +1,7 @@
 package com.company;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.Date;
@@ -8,42 +9,26 @@ import java.util.Scanner;
 
 public class BenevoleController{
 
-    private SessionRepository sessionRepo = new SessionRepository();
-    private Scanner input = new Scanner(System.in);
+    private static SessionRepository sessionRepo = new SessionRepository();
+    private static Scanner input = new Scanner(System.in);
 
     public BenevoleController(){
 
     }
 
-    public boolean AddEntry(){
-        System.out.print("Entrez le nom: ");
-        String nom = input.nextLine();
-        
-        System.out.print("Entrez le prenom: ");
-        String prenom = input.nextLine();
+    public static SessionRepository GetSessionRepository() {
+        return sessionRepo;
+    }
 
-        LocalDate date = null;
-        while(date==null) {
-            try {
-                System.out.print("Entrez la date (YYYY-MM-DD): ");
-                String dateVisite = input.nextLine();
+    public static void AddSession(String nom, String prenom, LocalDateTime date, int typeDeDose) {
+        sessionRepo.AddSession(new Session(nom, prenom, date, typeDeDose));
+    }
 
-                System.out.print("Entrez l'heure de la visite (HH:MM): ");
-                String heureVisite = input.nextLine();
-
-                DateTimeFormatter format = DateTimeFormatter.ofPattern("YYYY-MM-DD HH:mm");
-                date = LocalDate.parse(dateVisite + " " + heureVisite, format);
-            } catch (Exception e) {
-                System.out.println("Entrer une date valide");
-            }
+    public static Session GetSessionFromCode(String code) {
+        for (Session session : sessionRepo.GetSessions()) {
+            if(session.is(code)) return session;
         }
-
-        System.out.print("Entrez le type de dose (1, 2): ");
-        int typeDeDose = Integer.parseInt(input.nextLine());
-
-        Session session = new Session(nom, prenom, date, typeDeDose);
-        sessionRepo.AddSession(session);
-        return true;
+        return null;
     }
 
 }

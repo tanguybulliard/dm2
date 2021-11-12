@@ -1,6 +1,7 @@
 package com.company;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 public class Session {
@@ -9,21 +10,31 @@ public class Session {
     private int reservationNumber;  //number on every object creation
     private String nom;
     private String prenom;
-    private LocalDate date;
+    private LocalDateTime date;
     private int typeDeDose; //Premiere ou deuxieme
+    private boolean confirmed;
 
     public Session(){
+        confirmed = false;
         reservationNumber = counter;
         counter++;
     }
 
-    public Session(String nom, String prenom, LocalDate date, int typeDeDose){
+    public Session(String nom, String prenom, LocalDateTime date, int typeDeDose){
         reservationNumber = counter;
         counter++;
         this.nom = nom;
         this.prenom = prenom;
         this.date = date;
         this.typeDeDose = typeDeDose;
+    }
+
+    public boolean is(String code) {
+        return reservationNumber==Integer.parseInt(code);
+    }
+
+    public void confirm() {
+        this.confirmed = true;
     }
 
     public void setNom(String nom) {
@@ -38,7 +49,7 @@ public class Session {
         this.typeDeDose = typeDeDose;
     }
 
-    public void setDate(LocalDate date) {
+    public void setDate(LocalDateTime date) {
         this.date = date;
     }
 
@@ -54,8 +65,12 @@ public class Session {
         return typeDeDose;
     }
 
-    public LocalDate getDate() {
+    public LocalDateTime getDate() {
         return date;
+    }
+
+    public int getReservationNumber() {
+        return reservationNumber;
     }
 
 }

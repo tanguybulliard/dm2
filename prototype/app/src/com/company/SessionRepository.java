@@ -15,4 +15,8 @@ public class SessionRepository{
         return true;
     }
 
+    public static ArrayList<Session> GetSessions() {
+        return sessions;
+    }
+
 }

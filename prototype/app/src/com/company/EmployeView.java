@@ -17,7 +17,7 @@ public class EmployeView extends View{
                 System.out.println("5: modifier benevole");
                 System.out.println("6: gérer calendrier bénévole");
                 System.out.println("7: gérer visiteur");
-                System.out.println("8: crér visiteur");
+                System.out.println("8: créer visiteur");
                 System.out.println("9: pour quitter le programme ");
                 String input = EmployeView.input.nextLine();
 
@@ -57,9 +57,7 @@ public class EmployeView extends View{
                         createMember();
                         break;
 
-
-                    case "10":
-
+                    case "9":
                         return;
 
                     default:
@@ -122,7 +120,6 @@ public class EmployeView extends View{
 
     }
     public static void updateVisiteur() {//faire méthode deleteclient, modifyClient
-
 
         while(true) {
             System.out.println("Voulez vous: ");

@@ -1,10 +1,11 @@
 package com.company;
 import java.util.Scanner;
 public class Main {
+
     static Scanner input = new Scanner(System.in);
     public static void main(String[] args) {
         while(true) {
-            System.out.println("Entrez 1 pour acceder au menu de Employe");
+            System.out.println("Entrez 1 pour acceder au menu d'employe");
             System.out.println("Entrez 2 pour acceder au menu de benevole");
             System.out.println("Entrez 3 pour quitter le programme");
 
@@ -13,11 +14,11 @@ public class Main {
             switch(menuChoice) {
 
                 case "1":
-                    BenevoleView.displayMenu();
+                    EmployeView.displayMenu();
                     break;
 
                 case "2":
-                    EmployeView.displayMenu();
+                    BenevoleView.displayMenu();
                     break;
 
                 case "3":
@@ -30,9 +31,6 @@ public class Main {
 
             }
         }
-
-
-
 
     }
 
