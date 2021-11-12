@@ -1,0 +1,102 @@
+# README
+
+Cette application est un prototype de VaxTodo permettant de gérer un local de vaccination
+
+## Fonctionnalités
+
+- Réserver une période de vaccination
+- Gérer les comptes des visiteurs, bénévoles
+- Confirmer la présence des visiteurs
+
+## Manuel d'utilisation
+
+Pour utiliser l'application, il vous faut exécuter la commande suivante: `java Main` .
+Étant un prototype, nous avons inclus un jeu de données afin de tester l'application.
+À l'ouverture, vous devez vous connecter en tant qu'employé ou bénévole. Ceci vous donnera accès
+au menu principal propre au rôle.
+
+### Données incluses dans l'application
+
+- Rendez-vous
+  - 000001;foret;aura;2021-11-05;10:00;1
+  - 000002;buisson;paul;2021-12-02;14:00;2
+- Visiteur
+  - 202010250001;cortez;juan;1990-01-13;juan.cortez@gmail.com;5147836802
+  - 202004280010;hannoune;isabelle;1994-10-06;isa.hannoune@gmail.com;4382835821
+
+
+### Connexion
+
+Pour se connecter à l'application, veuillez utiliser un des identifiants suivants:
+
+- Rôle de l'employé
+  - username: argo | password: argopass
+  - username: anna | password: annapass
+- Rôle du bénévole
+  - username: benoit | password: benoitpass
+  - username: viola | password: violapass
+
+### Menu principal (Bénévole)
+- [1] afficher les rendez-vous
+- [2] ajouter un rendez-vous
+- [3] confirmer présence
+- [4] verifier le rendez-vous avec le numéro de vérification
+- [5] afficher liste visiteurs
+- [6] nombre de personnes dans le local
+- [7] quitter le programme
+
+    #### afficher les rendez-vous
+    Dans cette section vous pouvez afficher les rendez-vous, pour savoir les places disponibles
+
+    #### ajouter un rendez-vous
+    cette section permet au bénévoles d'ajouter un rendez-vous lors d'un appel téléphonique, une visite spontanée ou une
+    visite tardive.
+
+    #### confirmer présence
+    Permet de confirmer que la personne est dans la file d'attente
+
+    #### verifier le rendez-vous avec le numéro de vérification
+    Permet de vérifier que la personne a bien un rendez-vous lorsqu'il arrive à l'accueil
+
+    ###nombre de personnes dans le local
+    PErmet aux bénévole de vérifier le nombre de personnes dans le local en direct.
+
+    ###quitter le programme
+    On retourne à Connexion
+
+### Menu principal (Employé)
+
+À partir du menu principal, dans le rôle de l'employé, vous pouvez choisir l'une des options suivantes en tapant le chiffre correspondant.
+En tout tant vous pouvez taper 0 pour revenir au menu principal.
+
+- [1] afficher les rendez-vous
+- [2] ajouter un rendez-vous
+- [3] créer benevole
+- [4] supprimer benevole
+- [5] modifier benevole
+- [6] gérer calendrier bénévole
+- [7] gérer visiteur
+- [8] quitter le programme
+
+    #### afficher les rendez-vous
+    Dans cette section vous pouvez afficher les rendez-vous, pour savoir les places disponibles
+
+    #### ajouter un rendez-vous
+    cette section permet au bénévoles d'ajouter un rendez-vous lors d'un appel téléphonique, une visite spontanée ou une
+    visite tardive.
+
+    #### créer benevole
+    permet de créer un nouveau bénévole
+
+    #### supprimer benevole
+    Permet de supprimer un bénévole
+
+    #### gérer calendrier bénévole
+    Permet de gérer la calendrier des prochains jours des bénévoles et leurs indiquées quand est-ce qu'ils doivent
+    être présent aux locals.
+
+    #### gérer visiteur
+   nous renvoie à ce menu:
+   - [1] supprimer un client
+   - [2] modifier un client
+   - [3]revenir en arrière
