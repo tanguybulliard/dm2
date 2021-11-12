@@ -1,4 +1,4 @@
-# README
+# VaxTODO
 
 Cette application est un prototype de VaxTodo permettant de gérer un local de vaccination
 
