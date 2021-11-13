@@ -32,4 +32,8 @@ public class Client {
 
     }
 
+    public String GetID(){
+        return numeroDeCompte;
+    }
+
 }

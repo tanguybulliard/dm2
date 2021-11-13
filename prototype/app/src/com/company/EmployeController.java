@@ -13,4 +13,10 @@ public class EmployeController{
         return true;
     }
 
+    public static boolean UpdateMember(String clientID){
+        Client temp = clientRepo.GetClientFromID(clientID);
+
+        return true;
+    }
+
 }

@@ -14,4 +14,12 @@ public class ClientRepository{
         clients.add(client);
         return true;
     }
+
+    public static Client GetClientFromID(String ID){
+        for(Client c: clients){
+            if(c.GetID().equals(ID))
+                return c;
+        }
+        return null;
+    }
 }
