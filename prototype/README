@@ -59,7 +59,7 @@ Pour se connecter à l'application, veuillez utiliser un des identifiants suivan
     Permet de vérifier que la personne a bien un rendez-vous lorsqu'il arrive à l'accueil
 
     ###nombre de personnes dans le local
-    PErmet aux bénévole de vérifier le nombre de personnes dans le local en direct.
+    Permet aux bénévole de vérifier le nombre de personnes dans le local en direct.
 
     ###quitter le programme
     On retourne à Connexion
@@ -83,7 +83,7 @@ En tout tant vous pouvez taper 0 pour revenir au menu principal.
     Dans cette section vous pouvez afficher les rendez-vous, pour savoir les places disponibles
 
     #### ajouter un rendez-vous
-    cette section permet au bénévoles d'ajouter un rendez-vous lors d'un appel téléphonique, une visite spontanée ou une
+    Cette section permet au bénévoles d'ajouter un rendez-vous lors d'un appel téléphonique, une visite spontanée ou une
     visite tardive.
 
     #### créer benevole
