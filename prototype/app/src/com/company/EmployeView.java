@@ -174,7 +174,9 @@ public class EmployeView extends View {
                     break;
 
                 case "2":
-                    //this.modifyMember();
+                    System.out.print("Entrez le numero de compte du compte visiteur a modifier: ");
+                    String numero = EmployeView.input.nextLine();
+                    EmployeController.UpdateMember(numero);
                     break;
 
                 case "3":
