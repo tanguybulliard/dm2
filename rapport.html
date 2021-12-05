@@ -219,20 +219,25 @@
               </thead>
               <tbody>
                 <tr>
-                  <th scope="row">Semaine (24-31 octobre)</th>
-                  <td>Actualiser la partie dont j'étais responsable du tp1, 
-		écriture de l'analyse et diagramme d'acitivités ainsi que le diagramme de classe</td>
+                  <th scope="row">Semaine (23-29 novembre)</th>
+                  <td>ajustement diagramme de classe</td>
                   <td>Analyse</td>
                   <td>Développement du glossaire</td>
 
               </tr>
               <tr>
-                  <th scope="row">Semaine (1 novembre-7 novembre)</th>
-                  <td>implémentation patron Java</td>
+                  <th scope="row">Semaine (30 novembre-7 decembre)</th>
+                  <td>Conception</td>
                   <td>Écrire les scénarios</td>
                   <td>Conception du CU</td>
               </tr>
-              <
+              <tr>
+                  <th scope="row">Semaine (6 decembre-14 décembre)</th>
+                  <td>Application</td>
+                  <td>Écrire les scénarios</td>
+                  <td>Conception du CU</td>
+              </tr>
+              
           </tbody>
       </table>
 
@@ -534,7 +539,7 @@ Louis-Edouard LAFONTANT</p>
 	notre analyse c'est le plus bénéfiques. Pour les données, elles ne sont pas très nombreuses
 	comme mentionné plus haut. Mais elles sont sensibles. Nous devons donc proposer un moyen sûr
 	pour que ces données ne soient exploitées que par nos professionnels. Nous pourrions donc stocker ces données
-	dans une base de données externes. Nous utiliserons alors un JDBC et ferons attention de prévenir les injections SQL.
+	dans une base de données interne. Nous utiliserons alors une base de données sous forme de classe(voir classe Repository). Nous en avons fait 3 pour limiter les dépendances.
 	Nous demanderons aussi à tout les agents de porter une attention particulière aux ordinateurs quitte les éloignées des regroupements
 	de clients pour toujours avoir un oeil sur eux et voir qui et comment ils sont utiliés.	L'idée d'un ordinateur comme serveur n'est pas
 	une mauvaise idée mais une panne de cette ordinateur risquerait d'important problème. Pour cela il faudra donc le mettre
@@ -575,11 +580,23 @@ Louis-Edouard LAFONTANT</p>
 	<section>	
         <h2 id="Conception" class="section-title">Conception</h2>
         <h3>Justification des choix du design</h3>
-        <p>Le principe de forte cohésion et de faible couplage était notre but fixée lors de la conception de notre diagramme, Nous avons donc créer plusieurs repository, controller ,classe abstraite et mère, pour avoir un code bien structurer, donc facilement implémentable . On évite aussi la redondance et des dépendances trop importantes sur certaines classes</p>
+        <p>Le principe de forte cohésion et de faible couplage était notre but fixée lors de la conception de notre diagramme, Nous avons donc créer plusieurs repository, controller ,classe abstraite et mère, pour avoir un code bien structurer, donc facilement implémentable . On évite aussi la redondance et des dépendances trop importantes sur certaines classes. Nous permettons aussi plus de flexibilité, si nous souhaitons supprimer ou ajouter des fonctinnalitées au code. Nous pouvons donc aller plus vite lors de la conception du code et nous pouvons avoir une meilleur compréhension. </br>
+        Nous avons aussi implémenter des classes abstraites pour les classes réutisilables, comme la View. </br>
+        Nous avons aussi utiliser des classes mères et filles pour l'héritage et ainsi avoir un code plus élégant comme pour la classe mère "Personne" et ces classes filles "Employe"et"Client". Cette méthode aussi appélé composite permet aussi d'avoir une meilleur structuration du code.</br>
+        Nous avons utiliser un système de génération de ID pour les employes, bénévoles et client cela permet plus une identication plus efficaces.</br>
+        Notre code nous semble donc bien conçu et utilise les forces du langages JAVA pour obtenir un code efficient.
+
+        </p>
         <h3>Design détaillé</h3>
         <h4>diagramme de classe</h4>
-        <img src="images/Class Diagram2.jpg" alt="">
+        <img src="images/finalDiagramClass.jpg" alt="">
 	</section>
+        <h4>Diagramme de séquences</h4>
+        <img src="images/diagramme sequence add member.png" alt="">
+        <img src="images/diagramme sequence add session.png" alt="">
+        <img src="images/diagramme sequence delete member.png" alt="">
+        <img src="images/diagramme sequence update member.png" alt="">
+        
 <section>
     <h2 id="prototype" class="section-title">Prototype</h2>
     <ul class="bare-list previews">

@@ -1,14 +1,12 @@
 package com.company;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.time.format.DateTimeParseException;
-import java.util.Date;
 import java.util.Scanner;
 
-public class BenevoleController{
 
+
+public class BenevoleController{
+    //on cree le repositorie Session
     private static SessionRepository sessionRepo = new SessionRepository();
     private static Scanner input = new Scanner(System.in);
 
@@ -20,10 +18,25 @@ public class BenevoleController{
         return sessionRepo;
     }
 
-    public static void AddSession(String nom, String prenom, LocalDateTime date, int typeDeDose) {
+    /***
+     * Permet d'ajouter une session à la classe SessionRepository un rendez-vous
+     * @param nom
+     * @param prenom
+     * @param date
+     * @param typeDeDose
+     * @return
+     */
+    public static Object AddSession(String nom, String prenom, LocalDateTime date, int typeDeDose) {
         sessionRepo.AddSession(new Session(nom, prenom, date, typeDeDose));
+        return null;
     }
 
+    /***
+     * Prend le code de réservation en entrée et renvoie null ou les détails du rendez-vous
+     * s'il y a une reservation
+     * @param code
+     * @return null or Session
+     */
     public static Session GetSessionFromCode(String code) {
         for (Session session : sessionRepo.GetSessions()) {
             if(session.is(code)) return session;
