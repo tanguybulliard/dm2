@@ -10,9 +10,10 @@ public class SessionRepository{
 
     }
 
-    public static boolean AddSession(Session session){
+    public static String AddSession(Session session){
         sessions.add(session);
-        return true;
+
+        return Integer.toString(session.getReservationNumber());
     }
 
     public static ArrayList<Session> GetSessions() {

@@ -12,8 +12,6 @@ public class EmployeController{
     /**
      * Permet de créer un client avec les paramètres suivant
      *
-     * @param deCompte
-     * @param s
      * @param numeroDeCompte
      * @param nom
      * @param prenom
@@ -27,10 +25,9 @@ public class EmployeController{
      * @param typeVaccin
      * @return True
      */
-    public static boolean CreateClient(String deCompte, String s, String numeroDeCompte, String nom, String prenom, String dateDeNaissance, String numAssuranceMaladie, String dateVisite,
+    public static boolean CreateClient(String numeroDeCompte, String nom, String prenom, String dateDeNaissance, String numAssuranceMaladie, String dateVisite,
                                        String dose, String ifCovid, String ifSymptome, String ifallergie, String typeVaccin){
-        clientRepo.AddClient(new Client(numeroDeCompte, nom, prenom, dateDeNaissance, numAssuranceMaladie, dateVisite, dose, ifCovid, ifSymptome, ifallergie, typeVaccin));
-        return true;
+        return clientRepo.AddClient(new Client(numeroDeCompte, nom, prenom, dateDeNaissance, numAssuranceMaladie, dateVisite, dose, ifCovid, ifSymptome, ifallergie, typeVaccin));
     }
 
     /**
@@ -48,8 +45,7 @@ public class EmployeController{
      */
     public static boolean CreateBenevole(String id, String motDePasse, String nom, String prenom, String addresse,
                                          String codePostal, String ville, String Email, int cellulaire) {
-        benevoleRepo.AddBenevole(new Benevole(id, motDePasse, nom, prenom, addresse, codePostal, ville, Email, cellulaire));
-        return true;
+        return benevoleRepo.AddBenevole(new Benevole(id, motDePasse, nom, prenom, addresse, codePostal, ville, Email, cellulaire));
     }
 
     /**

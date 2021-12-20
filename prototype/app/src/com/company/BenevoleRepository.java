@@ -11,8 +11,13 @@ public class BenevoleRepository {
      * id, motDePasse, nom, prenom, addresse, codePostal, ville, Email, cellulaire
      * @param benevole
      */
-    public static void AddBenevole(Benevole benevole) {
+    public static boolean AddBenevole(Benevole benevole) {
+        for (Benevole b: benevoles) {
+            if(b.id.equals(benevole.id));
+            return false;
+        }
         benevoles.add(benevole);
+        return true;
     }
 
 }

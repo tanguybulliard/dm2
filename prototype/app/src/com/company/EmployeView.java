@@ -182,7 +182,7 @@ public class EmployeView extends View {
         }
 
         //si la creation n'est pas reussie, on en informe l'agent
-        if (EmployeController.CreateClient("123456789112", "nom", numeroDeCompte, nom, prenom, dateDeNaissance, numAssuranceMaladie, dateVisite,
+        if (EmployeController.CreateClient(numeroDeCompte, nom, prenom, dateDeNaissance, numAssuranceMaladie, dateVisite,
                 dose, ifCovid, ifSymptome, ifallergie, typeVaccin)) {
             System.out.println("Une erreur est survenue et le compte n'a pas pu être créé.\n");
             return;

@@ -15,9 +15,12 @@ public class ClientRepository{
      * @param client
      * @return True
      */
-    public static boolean AddClient(Client client){
-        clients.add(client);
-        return true;
+    public static boolean AddClient(Client client) {
+        if(GetClientFromID(client.GetID())==null) {
+            clients.add(client);
+            return true;
+        }
+        return false;
     }
 
     /**
