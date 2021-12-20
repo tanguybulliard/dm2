@@ -26,9 +26,8 @@ public class BenevoleController{
      * @param typeDeDose
      * @return
      */
-    public static Object AddSession(String nom, String prenom, LocalDateTime date, int typeDeDose) {
-        sessionRepo.AddSession(new Session(nom, prenom, date, typeDeDose));
-        return null;
+    public static boolean AddSession(String nom, String prenom, LocalDateTime date, int typeDeDose) {
+        return sessionRepo.AddSession(new Session(nom, prenom, date, typeDeDose));
     }
 
     /***

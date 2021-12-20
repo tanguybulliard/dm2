@@ -15,7 +15,7 @@ public class ClientRepository{
      * @param client
      * @return True
      */
-    public boolean AddClient(Client client){
+    public static boolean AddClient(Client client){
         clients.add(client);
         return true;
     }

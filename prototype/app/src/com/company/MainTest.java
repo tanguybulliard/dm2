@@ -5,10 +5,7 @@ import java.util.Date;
 import org.junit.jupiter.api.Test;
 
 import static com.company.ClientRepository.GetClientFromID;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 
 class MainTest {
@@ -43,16 +40,19 @@ class MainTest {
     public void testBenevoleController() {
         LocalDateTime now = LocalDateTime.now();
         //on test la fonction qui permet de verifier les rendez-vous
-        assertEquals(null, BenevoleController.AddSession("nom", "prenom", now, 1));
-        assertNotEquals(null, BenevoleController.AddSession("nom", "prenom", now, 2));
-
-
+        assertTrue(BenevoleController.AddSession("nom", "prenom", now, 1));
+        assertFalse(BenevoleController.AddSession("nom", "prenom", now, 2));
     }
+
     @Test
     public void testClientRepository() {
-        assertNotEquals(null, GetClientFromID("123456789112"));
-        assertEquals(null, GetClientFromID("123456789119"));
+        ClientRepository.AddClient(new Client("1234", "a","b","2000-01-01","123456","2020-01-01", "", "1", "1", "1","1"));
+        assertNotNull(GetClientFromID("1234"));
+        assertNull(GetClientFromID("123456789119"));
+    }
 
+    @Test
+    public void test() {
 
     }
 }
